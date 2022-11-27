@@ -1,0 +1,220 @@
+#pragma once
+/*******************************************
+Модуль для українізації кодування мовою С++17
+версія: 1.2.2
+дата  : 2022/11/07
+автор : Леонід Українець
+*******************************************/
+//#include <bits/stdc++.h>
+// макровизначення
+#define віндовз            _WIN32
+#define пінґвін            __linux
+// загальне
+#define стдвв              <stdio.h>
+#define вектори            <vector>
+#define алгоритми          <algorithm>
+#define черги              <deque>
+#define деки               <deque>
+#define списки             <list>
+#define стоси              <stack>
+#define адаптери_черг      <queue>
+#define математика         <cmath>
+#define межі               <limits>
+#define ввпотоки           <iostream>  
+#define фпотоки            <fstream> 
+#define функціонал         <functional>
+#define множини            <set>
+#define масиви             <array>
+#define карти              <map>
+#define стрічки            <string>
+#define використовувати    using
+#define простірімен        namespace
+#define стандартний        std
+#define основна            main
+#define вивести            cout
+#define ввести             cin
+#define вивід              printf
+#define ввід               scanf
+#define статичне           static
+#define статична           static
+#define статичний          static
+#define повернути          return
+#define постійна           const
+#define постійний          const
+#define кр                 endl
+// типи даних
+#define ціле               int   
+#define ціла               int 
+#define цілий              int   
+#define цілі               int 
+#define цілих              int
+#define знак               char
+#define рядок              string
+#define логічне            bool
+#define логічний           bool
+#define дійсне             float
+#define дійсний            float
+#define дійсна             float
+#define дійсні             float
+#define точне              double
+#define точна              double
+#define точний             double
+#define порожнє            void
+#define пуста              void
+#define беззнакове         unsigned
+#define довге              long
+#define коротке            short
+#define типу               deftype
+#define тип                typename
+#define шаблон             template
+// умови
+#define якщо(вираз)        if(вираз)
+#define інакше             else
+#define а_якщо(вираз)      else if(вираз)
+#define перемикач          switch
+#define варіант            case
+#define за_замовчуванням   default
+#define якщо_істина(умова, істинна, хибна)   (умова) ? істинна : хибна;
+// логіка:
+#define і			  	         &&
+#define або				         ||
+#define не                 !
+#define істинно            true
+#define хибно              false
+
+//цикли
+#define протягом           for
+#define для                for
+#define цикл(кількість)                 for (int i=0;i<кількість;i++)
+//#define поки(щось, робити)            while(щось){робити}
+#define поки                            while
+#define виконувати                      do
+#define робити(робити, щось)            do{робити}while(щось)
+#define припинити           break;
+#define продовжити          continue;
+//функції і постійні
+#define степінь			        pow
+#define нескінченність      infinity
+#define вбудована           inline
+#define корінь              sqrt
+//додаткове
+#define вийти               exit
+#define випадковість        rand
+#define насіння             srand
+#define час                 time
+#define нема                NULL
+#define нема                nullptr
+//рядки
+
+#define отриматирядок       getline
+#define іп                  ws   
+#define не_знайдено         npos 
+#define ігнор               ignore          
+#define шукати              find
+#define незнайдено          npos
+#define пустий              empty
+#define очистити            clear
+#define дописати            append
+#define вставити            insert
+#define замінити            replace
+#define знищити             erase
+#define розмір              size
+#define підрядок            substr
+//вектори й інші типи
+#define вектор              vector
+#define дописати_кінець     push_back
+#define долучити_кінець     push_back
+#define вилучити_кінець     pop_back
+#define початок             begin
+#define кінець              end
+#define авто                auto
+#define ппочаток            rbegin
+#define пкінець             rend
+#define кпочаток            cbegin
+#define ккінець             cend
+#define обмін               swap
+#define числові_межі        numeric_limits
+#define черга               deque
+#define дек                 deque
+#define список              list
+#define долучити_початок    push_front
+#define вилучити_початок    pop_front
+#define порожній            empty
+#define змінити_розмір      resize
+#define ємність             capacity
+#define макс_розмір         max_size
+#define зарезервувати       reserve
+#define кінцевий            back
+#define початковий          front
+#define в                   at
+#define присвоїти           assign
+#define ітератор            iterator 
+#define зворотний_ітератор  reverse_iterator
+#define постійний_ітератор  const_iterator
+#define ітератор_зворотний  reverse_iterator
+#define ітератор_постійний  const_iterator
+#define постійний_зворотний_ітератор   const_reverse_iterator
+#define постійний_зворотний   const_reverse_iterator
+#define зрощення            splice
+#define вилучення           remove
+#define вилучення_якщо      remove_if
+#define унікальні           unique
+#define впорядкувати        sort
+#define злиття              merge
+#define перевернути         reverse
+#define стос                stack
+#define просунути           advance
+#define заштовхати          push
+#define виштовхати          pop
+#define вершина             top
+#define адаптер_черги       queue
+#define пріоритетна_черга   priority_queue
+#define більше              greater
+#define менше               less
+#define меньше              less
+#define масив               array
+#define множина             set
+#define мультимножина       multiset
+#define набір               set
+#define мультинабір         multiset
+#define мультикарта         multimap
+#define карта               map
+#define полічити            count
+#define нижня_межа          lower_bound
+#define верхня_межа         upper_bound
+#define діапазон_рівності   equal_range
+#define другий              second
+#define перший              first
+#define пара                pair
+//структури
+#define структура           struct 
+#define їїрозмір            sizeof
+
+//файли
+#define потік_виводу           ofstream
+#define потік_вводу            ifstream
+#define відкрити               open
+#define закрити                close
+#define відкритий              is_open
+#define дозапис                ios::app
+//класи
+#define клас                  class
+#define захищені              protected
+#define публічні              public
+#define приватні              private
+#define захищено              protected
+#define публічно              public
+#define приватно              private
+#define статична              static
+#define новий                 new
+#define вилучити              delete
+#define цей                   this    
+#define оператор              operator
+#define явний                 excplicit
+// винятки
+#define спробувати            try
+#define перехопити            catch
+#define викинути              throw
+#define виняток               exception
+#define логічна_помилка       logic_error
+#define помилка_виконання     runtime_error
